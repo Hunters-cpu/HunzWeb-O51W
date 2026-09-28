@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f0">
+<title>HunzWeb-O51W</title>
+<style>
+:root{--bg:#f4f4f0;--card:#fff;--ink:#111;--muted:#70706b;--line:#deded7;--dark:#111;--accent:#dfff45;--danger:#e94c4c;--r:26px;--shadow:0 15px 45px #0000000b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.wrap{width:min(1380px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:30;background:#f4f4f0e8;backdrop-filter:blur(16px);border-bottom:1px solid #00000009}.topin{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.04em}.logo{width:42px;height:42px;border-radius:14px;background:#111;color:#fff;display:grid;place-items:center;font-size:12px}.brand small{display:block;color:#888;font-size:10px;letter-spacing:.1em;text-transform:uppercase}.nav{display:flex;gap:5px}.nav a,.nav button{border:0;background:transparent;padding:10px 12px;border-radius:12px;font-weight:750;color:#666}.nav a:hover,.nav button:hover{background:#e8e8e2;color:#111}.pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-size:11px;font-weight:850;white-space:nowrap}.green{display:inline-block;width:7px;height:7px;border-radius:50%;background:#20ad68;margin-right:6px}
+.hero{margin-top:18px;background:#111;color:#fff;border-radius:36px;padding:clamp(28px,6vw,68px);min-height:450px;display:flex;align-items:center;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:400px;height:400px;background:var(--accent);border-radius:50%;right:-170px;bottom:-200px}.eyebrow,.label{font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:950;color:#969690}.hero h1{font-size:clamp(48px,8vw,100px);line-height:.88;letter-spacing:-.075em;max-width:900px;margin:18px 0}.hero p{max-width:700px;color:#c4c4bf;font-size:clamp(15px,2vw,19px);margin:0 0 25px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid transparent;border-radius:999px;padding:12px 17px;font-weight:900}.primary{background:#fff;color:#111}.dark{background:#111;color:#fff}.light{background:#fff;border-color:var(--line)}.accent{background:var(--accent);color:#111}.danger{background:#fff0f0;color:#9c2222;border-color:#ffd0d0}.ghost{background:transparent;border-color:#333;color:#fff}
+section{padding:60px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:22px}.head h2{margin:4px 0 0;font-size:clamp(32px,5vw,55px);line-height:.95;letter-spacing:-.06em}.head p{margin:8px 0 0;color:var(--muted)}.grid{display:grid;gap:14px}.apps{grid-template-columns:repeat(5,1fr)}.app{background:var(--card);border:1px solid var(--line);border-radius:23px;padding:20px;min-height:145px;box-shadow:var(--shadow);transition:.2s}.app:hover{transform:translateY(-3px)}.appicon{width:44px;height:44px;border-radius:14px;background:#ededE8;display:grid;place-items:center;font-weight:950}.app h3{font-size:16px;margin:16px 0 4px;letter-spacing:-.03em}.app p{margin:0;color:var(--muted);font-size:12px}
+ .stats{grid-template-columns:repeat(3,1fr)}.stat{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px}.stat b{font-size:46px;letter-spacing:-.07em}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:5px}.progress-analysis{background:#fff;border:1px solid var(--line);border-radius:24px;padding:20px 24px;margin-top:14px}.analysis-head{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:900}.analysis-head strong{font-size:24px;letter-spacing:-.04em}.analysis-bar{height:10px;margin:12px 0}.analysis-bar i{transition:width .25s ease}.analysis-details{display:flex;gap:10px 22px;flex-wrap:wrap;color:var(--muted);font-size:12px;font-weight:750}.analysis-details b{color:var(--ink);font-size:14px;margin-right:4px}.analysis-note{color:var(--muted);font-size:12px;line-height:1.5;margin:12px 0 0}.projects{grid-template-columns:1fr}.project-tools{display:grid;gap:14px;margin:24px 0}.project-filters{display:flex;gap:9px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;color:#666;border-radius:999px;padding:10px 17px;font-weight:750}.filter.active{background:#111;color:#fff;border-color:#111}.project-search,.project-sort{width:100%;border:1px solid var(--line);background:#fff;border-radius:999px;padding:15px 20px;color:var(--ink);outline:none}.project-sort{max-width:100%}.project-list{display:grid;gap:20px}.project{background:#fff;border:1px solid var(--line);border-radius:27px;padding:25px 29px;display:flex;flex-direction:column;box-shadow:var(--shadow);min-width:0}.projecttop{display:flex;justify-content:space-between;align-items:center}.projecticon{width:64px;height:64px;border-radius:18px;background:#ededeb;display:grid;place-items:center;font-size:24px}.projectmeta{display:flex;align-items:center;gap:18px;color:#858585;font-size:14px;font-weight:850}.fav{border:0;background:transparent;color:#888;font-size:22px;padding:5px}.fav.active{color:#e5b400}.project h3{font-size:24px;margin:16px 0 7px;letter-spacing:-.04em}.project p{color:var(--muted);font-size:16px;line-height:1.55;margin:0}.project-tags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}.project-tags span{background:#eee;border-radius:999px;padding:8px 13px;color:#777;font-size:12px;font-weight:800}.project-progress{margin-top:auto}.project-progress .smallrow{font-size:13px;font-weight:800;color:#777}.bar{height:7px;background:#e9e9e7;border-radius:999px;overflow:hidden;margin:10px 0 15px}.bar i{display:block;height:100%;background:#111;border-radius:999px}.project-bottom{border-top:1px solid #e6e6e3;padding-top:15px;display:flex;align-items:center;justify-content:space-between;gap:12px}.project-status{font-size:13px;color:#777;font-weight:750}.project-status:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#111;margin-right:9px}.project-link{font-size:14px;font-weight:900}.roadmap{grid-template-columns:1fr;gap:0;position:relative;padding:12px 0 12px 14px}.roadmap:before{content:"";position:absolute;left:28px;top:27px;bottom:27px;width:2px;background:#dededb}.road{position:relative;display:grid;grid-template-columns:56px 1fr;gap:12px;padding:0 0 26px;background:transparent;border:0;border-radius:0}.road:last-child{padding-bottom:0}.road-marker{z-index:1;width:38px;height:38px;border:2px solid #e0e0dd;border-radius:50%;background:#fff;color:#777;display:grid;place-items:center;font-size:12px;font-weight:900}.road.done .road-marker,.road.current .road-marker{background:#111;border-color:#111;color:#fff}.road-content{padding:3px 0 0}.road-state{font-size:11px;font-weight:950;letter-spacing:.08em;color:#777;text-transform:uppercase}.road b{display:block;font-size:19px;margin:5px 0}.road small{display:block;color:var(--muted);font-size:15px;line-height:1.55;margin-top:3px}.num{font-size:inherit;color:inherit;font-weight:inherit;margin:0}.empty{grid-column:1/-1;text-align:center;border:1px dashed #c9c9c2;padding:42px;border-radius:22px;color:var(--muted);background:#fafaf7}
+footer{padding:40px 0 80px;color:#777;font-size:12px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:15px}
+.modal{position:fixed;inset:0;z-index:100;background:#0009;display:none;align-items:center;justify-content:center;padding:15px}.modal.show{display:flex}.modalcard{width:min(700px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:30px;padding:25px}.modalhead{display:flex;justify-content:space-between;align-items:center}.modalhead h3{font-size:28px;margin:0;letter-spacing:-.05em}.close{border:0;background:#eee;width:38px;height:38px;border-radius:50%;font-size:20px}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:900}.field input,.field textarea,.field select{border:1px solid var(--line);border-radius:13px;padding:11px 12px;background:#fafaf7;outline:none}.field textarea{min-height:95px;resize:vertical}.formfoot{grid-column:1/-1;display:flex;justify-content:flex-end;gap:8px;margin-top:5px}
+.login{position:fixed;inset:0;z-index:200;background:#f4f4f0;display:none;align-items:center;justify-content:center;padding:18px}.login.show{display:flex}.loginbox{width:min(480px,100%);background:#111;color:#fff;border-radius:32px;padding:30px}.loginbox h1{font-size:48px;line-height:.9;letter-spacing:-.07em;margin:16px 0}.loginbox p{color:#aaa}.loginbox .field{margin-top:12px}.loginbox .field label{color:#bbb}.loginbox input{background:#202020;color:#fff;border-color:#3a3a3a}.loginbox .btn{width:100%;margin-top:16px}.hint{color:#777;font-size:10px;margin-top:12px}
+.admin{position:fixed;inset:0;z-index:80;background:#f4f4f0;display:none;overflow:auto}.admin.show{display:block}.adminbar{position:sticky;top:0;z-index:5;background:#111;color:#fff;padding:12px 0}.adminbarin{display:flex;justify-content:space-between;align-items:center;gap:10px}.adminlayout{display:grid;grid-template-columns:220px 1fr;gap:16px;padding:18px 0 60px}.sidebar{background:#111;color:#fff;border-radius:24px;padding:12px;height:max-content;position:sticky;top:82px}.sidebtn{width:100%;text-align:left;border:0;background:transparent;color:#aaa;padding:12px;border-radius:12px;font-weight:800}.sidebtn.active,.sidebtn:hover{background:#242424;color:#fff}.admincontent{min-width:0}.adminsection{display:none}.adminsection.active{display:block}.editor{background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px;margin-bottom:14px}.editor h3{margin:0 0 18px}.rows{display:grid;gap:9px}.rowitem{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f1f1ec;border-radius:15px;padding:12px}.rowitem .grow{min-width:0}.rowitem b,.rowitem small{display:block}.rowitem small{color:#777}.toast{position:fixed;z-index:300;right:15px;bottom:15px;background:#111;color:#fff;padding:13px 15px;border-radius:14px;font-size:12px;font-weight:850;opacity:0;transform:translateY(8px);transition:.2s}.toast.show{opacity:1;transform:none}
+.mobile{display:none;position:fixed;bottom:10px;left:10px;right:10px;z-index:50;background:#111;border-radius:20px;padding:7px;grid-template-columns:repeat(4,1fr)}.mobile a{color:#fff;text-align:center;font-size:10px;font-weight:800;padding:7px}.mobile span{display:block;font-size:16px}
+@media(max-width:1100px){.apps{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.wrap{width:calc(100% - 20px)}.nav{display:none}.hero{border-radius:27px;min-height:480px;padding:26px 21px}.hero h1{font-size:51px}.apps{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.head{display:block}.head .btn{margin-top:15px}.mobile{display:grid}.foot{display:block}.form{grid-template-columns:1fr}.field.full,.formfoot{grid-column:auto}.adminlayout{grid-template-columns:1fr}.sidebar{position:static}.adminbarin{align-items:flex-start}.adminbar .btn{padding:9px 12px}}
+@media(max-width:470px){.apps{grid-template-columns:1fr}.hero h1{font-size:45px}}
+
+/* Added sections: O51W identity, community voices, and documentation */
+.identity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.identity-card{background:var(--card);border:1px solid var(--line);border-radius:27px;padding:28px 30px;min-width:0;box-shadow:var(--shadow)}
+.identity-card.featured{background:#111;color:#fff;border-color:#111}
+.identity-icon{width:62px;height:62px;border-radius:18px;background:#ededeb;display:grid;place-items:center;font-size:27px;margin-bottom:20px}
+.identity-card.featured .identity-icon{background:#292929}
+.identity-kicker{font-size:11px;font-weight:950;letter-spacing:.15em;color:#777;text-transform:uppercase}
+.identity-card.featured .identity-kicker{color:#aaa}
+.identity-card h3{font-size:23px;letter-spacing:-.05em;margin:15px 0 9px}
+.identity-card p{color:var(--muted);font-size:15px;line-height:1.65;margin:0}
+.identity-card.featured p{color:#bcbcbc}
+.identity-card blockquote{border-left:2px solid #d7d7d2;padding-left:15px;margin:16px 0 0;color:#888;font-size:14px;font-style:italic;line-height:1.5}
+.identity-card.featured blockquote{border-color:#555;color:#bbb}
+.voice-wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:26px}
+.voice-track{display:grid;grid-template-columns:minmax(0,1fr);overflow:hidden;min-height:330px}
+.voice-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:38px;display:flex;flex-direction:column;justify-content:center;min-height:330px;box-shadow:var(--shadow)}
+.voice-icon{width:150px;height:150px;border-radius:25px;background:#ededeb;display:grid;place-items:center;font-size:55px;margin-bottom:24px}
+.voice-quote{font-size:clamp(20px,3vw,27px);line-height:1.5;letter-spacing:-.03em;margin:0 0 24px;max-width:850px}
+.voice-author{display:flex;align-items:center;gap:12px;color:#222;font-weight:850}
+.voice-avatar{width:48px;height:48px;border-radius:50%;background:#e7e7e5;display:grid;place-items:center;font-size:15px}
+.voice-author small{display:block;color:#888;font-size:12px;font-weight:600;margin-top:3px}
+.voice-controls{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.voice-arrows{display:flex;gap:9px}
+.voice-btn{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;color:#111}
+.voice-dots{display:flex;align-items:center;gap:9px}
+.voice-dot{width:10px;height:10px;border:0;border-radius:99px;background:#dededb;padding:0}
+.voice-dot.active{width:30px;background:#111}
+.docs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+.doc-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:23px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:200px}
+.doc-type{font-size:11px;font-weight:950;letter-spacing:.13em;text-transform:uppercase;color:#777}
+.doc-card h3{font-size:20px;letter-spacing:-.04em;margin:15px 0 7px}
+.doc-card p{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 20px}
+.doc-card a{font-size:13px;font-weight:900;margin-top:auto}
+@media(max-width:800px){.identity-grid,.docs-grid{grid-template-columns:1fr}.identity-card{padding:25px}.voice-card{padding:25px;min-height:300px}.voice-track{min-height:300px}.voice-icon{width:110px;height:110px;font-size:43px}.voice-quote{font-size:20px}}
+@media(prefers-reduced-motion:no-preference){.voice-card{animation:voiceIn .25s ease}@keyframes voiceIn{from{opacity:.65;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}}
+
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap topin">
+  <a class="brand" href="#home"><span class="logo">O51W</span><span>HunzWeb-O51W<small>Digital Home</small></span></a>
+  <nav class="nav"><a href="#apps">Apps</a><a href="#projects">Projects</a><a href="#roadmap">Roadmap</a><button id="openAdmin">Admin</button></nav>
+  <div class="pill"><span class="green"></span><span id="modeText">Public mode</span></div>
+</div></header>
+
+<main class="wrap" id="public">
+<section class="hero" id="home"><div>
+  <div class="eyebrow" id="heroEyebrow">WAA-O51W · HUNZAI · HUNZWEB</div>
+  <h1 id="heroTitle">Rumah digital untuk seluruh ekosistem O51W.</h1>
+  <p id="heroDesc">Satu tempat untuk melihat project, membuka produk, memantau progress, dan mengembangkan seluruh ruang digital O51W.</p>
+  <div class="actions"><a class="btn accent" href="#apps">Jelajahi Ekosistem ↗</a><button class="btn primary" id="adminHero">Admin Panel</button></div>
+</div></section>
+
+<section id="apps"><div class="head"><div><div class="label">Quick access</div><h2 id="appsTitle">Ruang O51W.</h2><p id="appsDesc">Produk utama yang menjadi bagian dari satu ekosistem.</p></div></div><div class="grid apps" id="appsGrid"></div></section>
+
+<section><div class="head"><div><div class="label">Overview</div><h2>Dashboard.</h2><p>Ringkasan project dari Cloud Firestore.</p></div></div>
+<div class="grid stats"><div class="stat"><b id="total">0</b><span>Total proyek</span></div><div class="stat"><b id="avg">0%</b><span>Progres keseluruhan</span></div><div class="stat"><b id="done">0</b><span>Proyek selesai</span></div></div><div class="progress-analysis"><div class="analysis-head"><span>Analisis pengerjaan seluruh proyek</span><strong id="overallProgress">0%</strong></div><div class="bar analysis-bar"><i id="overallBar" style="width:0%"></i></div><div class="analysis-details"><span><b id="activeCount">0</b> Sedang dikerjakan</span><span><b id="waitingCount">0</b> Belum dimulai</span><span><b id="completedCount">0</b> Selesai 100%</span></div><p class="analysis-note" id="analysisNote">Persentase dihitung dari rata-rata progres tiap proyek.</p></div></section>
+
+<section id="projects"><div class="head"><div><div class="label">Collection</div><h2>10 Proyek O51W.</h2><p id="projectsDesc">Urutan sudah ditetapkan. Satu per satu, nggak loncat. Klik ⭐ buat tandai favorit.</p></div></div><div class="project-tools"><div class="project-filters" id="projectFilters"><button class="filter active" data-filter="Semua">Semua 10</button><button class="filter" data-filter="Inti">Inti</button><button class="filter" data-filter="AI">AI</button><button class="filter" data-filter="Tools">Tools</button><button class="filter" data-filter="Web">Web</button><button class="filter" data-filter="Storage">Storage</button><button class="filter" data-filter="Belajar">Belajar</button><button class="filter" data-filter="Sosial">Sosial</button><button class="filter" data-filter="Favorit">⭐ Favorit <span id="favCount">0</span></button></div><input class="project-search" id="projectSearch" type="search" placeholder="⌕   Cari proyek…" aria-label="Cari proyek"><select class="project-sort" id="projectSort" aria-label="Urutkan proyek"><option value="order">Urut nomor</option><option value="name">Nama A–Z</option><option value="progress">Progres tertinggi</option></select></div><div class="project-list" id="projectGrid"></div></section>
+
+<section id="roadmap"><div class="head"><div><div class="label">Roadmap</div><h2 id="roadTitle">Roadmap Pengerjaan.</h2><p id="roadDesc">Urutan ini yang kita pegang. Selesai satu, lanjut satu.</p></div></div><div class="grid roadmap" id="roadGrid"></div></section>
+
+<section id="identity"><div class="head"><div><div class="label">Cerita tiga nama</div><h2>Satu Identitas — O51W</h2><p>Bukan cuma nama. Tanda kepunyaan, jejak perjalanan, bukti dari yang kosong jadi nyata.</p></div></div>
+<div class="identity-grid">
+<article class="identity-card"><div class="identity-icon">🌱</div><div class="identity-kicker">Akar</div><h3>WAA-O51W</h3><p>Akar dari segalanya. Semua bermula dari keinginan sederhana — nggak mau bergantung sama sistem orang lain.</p><blockquote>Ibarat tanah tempat semuanya tumbuh.</blockquote></article>
+<article class="identity-card featured"><div class="identity-icon">🤖</div><div class="identity-kicker">Pendamping</div><h3>HunzAi-O51W</h3><p>Teman, pendamping, yang tumbuh bareng. Ngerti, mendampingi, selalu setia — bukan cuma kode, tapi kehadiran.</p><blockquote>Ibarat bayangan yang nggak akan ninggalin lu.</blockquote></article>
+<article class="identity-card"><div class="identity-icon">🌐</div><div class="identity-kicker">Rumah</div><h3>HunzWeb-O51W</h3><p>Wajah, jendela, rumah digital kita. Tempat semua berkumpul, tempat kita sapa dunia — rapi, indah, milik sendiri.</p><blockquote>Ibarat rumah yang kita bangun sendiri.</blockquote></article>
+</div></section>
+
+<section id="voices"><div class="head"><div><div class="label">Suara kita</div><h2>Tiga nama, tiga suara</h2><p>Catatan kecil tentang perjalanan membangun ruang digital O51W.</p></div></div>
+<div class="voice-wrap"><div class="voice-track" id="voiceTrack" aria-live="polite"><article class="voice-card"><div class="voice-icon">🌐</div><p class="voice-quote">“Wajah kita ke dunia. Tempat pulang semua karya. Dibangun dari kosong, sekarang jadi nyata.”</p><div class="voice-author"><span class="voice-avatar">W</span><span>HunzWeb-O51W<small>Rumah digital</small></span></div></article></div>
+<div class="voice-controls"><div class="voice-arrows"><button class="voice-btn" id="voicePrev" aria-label="Suara sebelumnya">←</button><button class="voice-btn" id="voiceNext" aria-label="Suara berikutnya">→</button></div><div class="voice-dots" id="voiceDots" aria-label="Pilih suara"></div></div></div></section>
+
+<section id="docs"><div class="head"><div><div class="label">Catatan</div><h2>Blog &amp; Dokumentasi</h2><p>Jejak ide, proses pengerjaan, dan perkembangan ekosistem O51W.</p></div></div>
+<div class="docs-grid">
+<article class="doc-card"><div class="doc-type">Identitas · O51W</div><h3>Awal mula O51W</h3><p>Kenali akar, pendamping, dan rumah digital yang membentuk satu identitas.</p><a href="#identity">Lihat identitas →</a></article>
+<article class="doc-card"><div class="doc-type">Proses · Pengerjaan</div><h3>Perjalanan 10 proyek</h3><p>Ikuti daftar proyek, persentase progres, dan status pengerjaan saat ini.</p><a href="#projects">Lihat proyek →</a></article>
+<article class="doc-card"><div class="doc-type">Rencana · Roadmap</div><h3>Langkah berikutnya</h3><p>Urutan tahap yang menjadi panduan pengembangan ruang digital O51W.</p><a href="#roadmap">Buka roadmap →</a></article>
+</div></section> </main>
+
+<footer class="wrap"><div class="foot"><b>HunzWeb-O51W · Digital Home of O51W</b><span id="year"></span></div></footer>
+<nav class="mobile"><a href="#home"><span>⌂</span>Home</a><a href="#apps"><span>✦</span>Apps</a><a href="#projects"><span>▣</span>Projects</a><a href="#roadmap"><span>◈</span>Roadmap</a></nav>
+
+<div class="login" id="login"><div class="loginbox">
+  <div class="eyebrow">HUNZWEB-O51W</div><h1>Admin access.</h1><p>Masuk menggunakan akun Firebase Authentication yang ditetapkan sebagai admin.</p>
+  <form id="loginForm"><div class="field"><label>Email</label><input id="email" type="email" required></div><div class="field"><label>Password</label><input id="password" type="password" required></div><button class="btn accent" type="submit">Masuk</button></form>
+  <div class="hint">Password hanya diproses oleh Firebase Authentication dan tidak disimpan di halaman.</div>
+</div></div>
+
+<div class="admin" id="admin">
+<div class="adminbar"><div class="wrap adminbarin"><b>HunzWeb-O51W · Admin CMS</b><div class="actions"><button class="btn ghost" id="closeAdmin">Lihat Website</button><button class="btn accent" id="logout">Keluar</button></div></div></div>
+<div class="wrap adminlayout">
+<aside class="sidebar">
+<button class="sidebtn active" data-tab="overview">Dashboard</button><button class="sidebtn" data-tab="content">Konten Utama</button><button class="sidebtn" data-tab="appsEdit">Quick Access</button><button class="sidebtn" data-tab="roadEdit">Roadmap</button><button class="sidebtn" data-tab="projectsEdit">Projects</button><button class="sidebtn" data-tab="settings">Settings</button>
+</aside>
+<div class="admincontent">
+<section class="adminsection active" id="tab-overview"><div class="editor"><h3>Admin Dashboard</h3><p>Semua bagian utama HunzWeb-O51W dapat dikelola dari panel ini. Perubahan tersimpan ke Firestore.</p><div class="grid stats"><div class="stat"><b id="aTotal">0</b><span>Projects</span></div><div class="stat"><b id="aAvg">0%</b><span>Progress</span></div><div class="stat"><b id="aDone">0</b><span>Selesai</span></div></div></div></section>
+
+<section class="adminsection" id="tab-content"><div class="editor"><h3>Konten Utama</h3><form id="contentForm" class="form">
+<div class="field full"><label>Eyebrow</label><input id="cEyebrow"></div><div class="field full"><label>Judul Hero</label><input id="cTitle"></div><div class="field full"><label>Deskripsi Hero</label><textarea id="cDesc"></textarea></div>
+<div class="field"><label>Judul Quick Access</label><input id="cAppsTitle"></div><div class="field"><label>Deskripsi Quick Access</label><input id="cAppsDesc"></div>
+<div class="field"><label>Judul Roadmap</label><input id="cRoadTitle"></div><div class="field"><label>Deskripsi Roadmap</label><input id="cRoadDesc"></div>
+<div class="field full"><label>Deskripsi Project</label><input id="cProjectsDesc"></div>
+<div class="formfoot"><button class="btn dark" type="submit">Simpan Konten</button></div></form></div></section>
+
+<section class="adminsection" id="tab-appsEdit"><div class="editor"><h3>Quick Access</h3><div class="rows" id="appsAdminRows"></div><div class="actions" style="margin-top:13px"><button class="btn dark" id="addApp">+ Tambah App</button></div></div></section>
+<section class="adminsection" id="tab-roadEdit"><div class="editor"><h3>Roadmap Pengerjaan</h3><p>Atur nomor urutan, nama, deskripsi, dan status setiap tahap. Perubahan akan tampil di roadmap publik.</p><div class="rows" id="roadAdminRows"></div><div class="actions" style="margin-top:13px"><button class="btn dark" id="addRoad">+ Tambah Roadmap</button></div></div></section>
+<section class="adminsection" id="tab-projectsEdit"><div class="editor"><div class="head"><div><h3>10 Proyek & Progres</h3><p>Atur persentase pengerjaan setiap proyek. Status dan analisis progres mengikuti persentase.</p></div><button class="btn dark" id="addProject">+ Project</button></div><div class="rows" id="projectAdminRows"></div></div></section>
+<section class="adminsection" id="tab-settings"><div class="editor"><h3>Settings</h3><p><b>Admin:</b> <span id="adminEmail"></span></p><p style="color:#777">Hak tulis dikontrol oleh Firestore Security Rules. Public hanya dapat membaca konten.</p></div></section>
+</div></div></div>
+
+<div class="modal" id="editModal"><div class="modalcard"><div class="modalhead"><h3 id="modalTitle">Edit</h3><button class="close" id="modalClose">×</button></div><form id="editForm" class="form"></form></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+const firebaseConfig={apiKey:"AIzaSyAJFzhiJg0Y1DfH_gRo98yqTtEfYaqwcUE",authDomain:"bisnis-portofolioku.firebaseapp.com",projectId:"bisnis-portofolioku",storageBucket:"bisnis-portofolioku.firebasestorage.app",messagingSenderId:"1029563186618",appId:"1:1029563186618:web:0220f5156330206b31f183",measurementId:"G-RKFXZDF744"};
+firebase.initializeApp(firebaseConfig);const auth=firebase.auth(),db=firebase.firestore();
+const ADMIN_EMAIL="waao51w@gmail.com";
+const $=id=>document.getElementById(id); let content={},apps=[],roadmap=[],projects=[],listeners=[];
+
+const defaults={
+eyebrow:"WAA-O51W · HUNZAI · HUNZWEB",title:"Rumah digital untuk seluruh ekosistem O51W.",desc:"Satu tempat untuk melihat project, membuka produk, memantau progress, dan mengembangkan seluruh ruang digital O51W.",
+appsTitle:"Ruang O51W.",appsDesc:"Produk utama yang menjadi bagian dari satu ekosistem.",projectsDesc:"Urutan sudah ditetapkan. Satu per satu, nggak loncat. Klik ⭐ buat tandai favorit.",roadTitle:"Roadmap Pengerjaan.",roadDesc:"Urutan ini yang kita pegang. Selesai satu, lanjut satu."
+};
+const defaultApps=[
+{name:"O51W AI Studio",desc:"AI workspace",icon:"✦",url:"#"},
+{name:"O51W CodeForge",desc:"Coding & development",icon:"</>",url:"#"},
+{name:"Website Builder",desc:"Build & publish",icon:"▦",url:"#"},
+{name:"O51W Cloud",desc:"Files & workspace",icon:"☁",url:"#"},
+{name:"Galeri Kenangan",desc:"Memory collection",icon:"◫",url:"#"},
+{name:"O51W Dashboard",desc:"Data & analytics",icon:"◈",url:"#"},
+{name:"O51W Learn",desc:"Learn & grow",icon:"◎",url:"#"},
+{name:"O51W Archive",desc:"Knowledge base",icon:"▤",url:"#"},
+{name:"O51W Social",desc:"Community space",icon:"◉",url:"#"},
+{name:"HunzWeb",desc:"Central home",icon:"⌂",url:"#"}
+];
+const defaultProjects=[
+{key:"p01",order:1,name:"HunzWeb-O51W",category:"Inti",tags:["Pusat","Dashboard"],icon:"🏠",description:"Pusat semua proyek Bos — website, aplikasi, karya, dan dokumentasi dalam satu tempat.",progress:100,status:"Completed",url:"#"},
+{key:"p02",order:2,name:"O51W AI Studio",category:"AI",tags:["AI","Generator"],icon:"🤖",description:"Bikin website, landing page, teks, ide desain, dan kode langsung dari prompt.",progress:25,status:"Active",url:"#"},
+{key:"p03",order:3,name:"O51W CodeForge",category:"Tools",tags:["Tools","Code Editor"],icon:"💻",description:"Editor kode online untuk menulis, mengedit, menjalankan, dan menyimpan HTML/CSS/JS.",progress:0,status:"Planning",url:"#"},
+{key:"p04",order:4,name:"O51W Website Builder",category:"Web",tags:["Web","Builder"],icon:"🧩",description:"Tulis satu kalimat, sistem menyusun website yang bisa langsung dipreview.",progress:0,status:"Planning",url:"#"},
+{key:"p05",order:5,name:"O51W Cloud",category:"Storage",tags:["Cloud","Storage"],icon:"☁️",description:"Penyimpanan pribadi untuk file, gambar, kode, dokumen, dan proyek.",progress:0,status:"Planning",url:"#"},
+{key:"p06",order:6,name:"Galeri Kenangan Sekolah",category:"Sosial",tags:["Galeri","Sekolah"],icon:"📸",description:"Galeri kelas, guru, kegiatan, pengumuman, album kenangan, dan admin tiap kelas.",progress:0,status:"Planning",url:"#"},
+{key:"p07",order:7,name:"O51W Dashboard",category:"Inti",tags:["Dashboard","Produktivitas"],icon:"📊",description:"Atur proyek, tugas, catatan, file, jadwal, dan progres dalam satu dashboard.",progress:0,status:"Planning",url:"#"},
+{key:"p08",order:8,name:"O51W Learn",category:"Belajar",tags:["Belajar","Kuis"],icon:"📚",description:"Materi belajar, latihan, kuis, progres, dan ruang kelas digital.",progress:0,status:"Planning",url:"#"},
+{key:"p09",order:9,name:"O51W Archive",category:"Storage",tags:["Arsip","Dokumentasi"],icon:"🗃️",description:"Simpan riwayat proyek, versi, screenshot, kode, dokumen, dan catatan perubahan.",progress:0,status:"Planning",url:"#"},
+{key:"p10",order:10,name:"O51W Social",category:"Sosial",tags:["Sosial","Komunitas"],icon:"🌐",description:"Bagikan karya melalui postingan, profil, komentar, komunitas, dan ruang kolaborasi.",progress:0,status:"Planning",url:"#"}
+];
+const defaultRoad=[
+{name:"HunzWeb-O51W",desc:"Pusat semua proyek Bos — website, aplikasi, karya, dan dokumentasi dalam satu tempat.",num:"01",status:"done"},
+{name:"O51W AI Studio",desc:"Bikin website, landing page, teks, ide desain, dan kode langsung dari prompt.",num:"02",status:"current"},
+{name:"O51W CodeForge",desc:"Editor kode online untuk menulis, mengedit, menjalankan, dan menyimpan HTML/CSS/JS.",num:"03",status:"waiting"},
+{name:"O51W Website Builder",desc:"Tulis satu kalimat, sistem menyusun website yang bisa langsung dipreview.",num:"04",status:"waiting"},
+{name:"O51W Cloud",desc:"Penyimpanan pribadi untuk file, gambar, kode, dokumen, dan proyek.",num:"05",status:"waiting"},
+{name:"Galeri Kenangan Sekolah",desc:"Galeri kelas, guru, kegiatan, pengumuman, album kenangan, dan admin tiap kelas.",num:"06",status:"waiting"},
+{name:"O51W Dashboard",desc:"Atur proyek, tugas, catatan, file, jadwal, dan progres dalam satu dashboard.",num:"07",status:"waiting"},
+{name:"O51W Learn",desc:"Materi belajar, latihan, kuis, progres, dan ruang kelas digital.",num:"08",status:"waiting"},
+{name:"O51W Archive",desc:"Simpan riwayat proyek, versi, screenshot, kode, dokumen, dan catatan perubahan.",num:"09",status:"waiting"},
+{name:"O51W Social",desc:"Bagikan karya melalui postingan, profil, komentar, komunitas, dan ruang kolaborasi.",num:"10",status:"waiting"}
+];
+
+function toast(s){let t=$("toast");t.textContent=s;t.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove("show"),2400)}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function isAdmin(){return !!auth.currentUser&&String(auth.currentUser.email||"").toLowerCase()===ADMIN_EMAIL}
+function assertAdmin(){if(!isAdmin())throw new Error("Akun ini bukan admin.")}
+function safeHref(value){const v=String(value||"#").trim();return /^(https?:\/\/|#|\/|\.\/)/i.test(v)?esc(v):"#"}
+function progressLabel(p){let n=Math.max(0,Math.min(100,Number(p.progress)||0));return p.status==="Paused"?"Dijeda":n>=100?"Selesai":n>0?"Dikerjakan":"Belum dimulai"}
+function setMode(){let a=isAdmin();$("modeText").textContent=a?"Admin mode":"Public mode";$("adminEmail").textContent=auth.currentUser?.email||"-"}
+function renderPublic(){
+$("heroEyebrow").textContent=content.eyebrow||defaults.eyebrow;$("heroTitle").textContent=content.title||defaults.title;$("heroDesc").textContent=content.desc||defaults.desc;
+$("appsTitle").textContent=content.appsTitle||defaults.appsTitle;$("appsDesc").textContent=content.appsDesc||defaults.appsDesc;$("projectsDesc").textContent=content.projectsDesc||defaults.projectsDesc;$("roadTitle").textContent=content.roadTitle||defaults.roadTitle;$("roadDesc").textContent=content.roadDesc||defaults.roadDesc;
+$("appsGrid").innerHTML=apps.map(x=>`<a class="app" href="${safeHref(x.url)}"><div class="appicon">${esc(x.icon||"O")}</div><h3>${esc(x.name)}</h3><p>${esc(x.desc)}</p></a>`).join("");
+$("roadGrid").innerHTML=[...roadmap].sort((a,b)=>(Number(a.num)||0)-(Number(b.num)||0)).map((x,i)=>{let st=x.status||(i===0?"done":i===1?"current":"waiting"),label=st==="done"||st==="Completed"?"Selesai":st==="current"||st==="Active"?"Dikerjakan":"Menunggu";return `<div class="road ${label==="Selesai"?"done":label==="Dikerjakan"?"current":"waiting"}"><div class="road-marker">${esc(x.num||String(i+1))}</div><div class="road-content"><div class="road-state">${label}</div><b>${esc(x.name)}</b><small>${esc(x.desc)}</small></div></div>`}).join("");
+renderProjects();
+}
+let activeProjectFilter="Semua",projectSearchText="",projectSortMode="order";
+let favoriteProjects=new Set();try{favoriteProjects=new Set(JSON.parse(localStorage.getItem("o51wProjectFavorites")||"[]"))}catch(e){}
+function getAllProjects(){
+ const merged=defaultProjects.map(p=>({...p}));
+ projects.forEach(saved=>{const idx=merged.findIndex(base=>(saved.key&&base.key===saved.key)||base.name===saved.name);if(idx>=0)merged[idx]={...merged[idx],...saved,id:saved.id};else merged.push({...saved})});
+ return merged.map((p,i)=>({...p,id:p.id||p.key||`custom-${i}`,order:Number(p.order)||i+1,progress:Math.max(0,Math.min(100,Number(p.progress)||0)),tags:Array.isArray(p.tags)?p.tags:[]})).sort((a,b)=>a.order-b.order);
+}
+function renderProjects(){
+ const normalized=getAllProjects();
+ const validKeys=new Set(normalized.map(p=>p.key||p.id||p.name));$("favCount").textContent=[...favoriteProjects].filter(k=>validKeys.has(k)).length;$("projectFilters").querySelector('[data-filter="Semua"]').textContent="Semua "+normalized.length;
+ let shown=normalized.filter(p=>{let q=projectSearchText.toLowerCase();let matchText=!q||[p.name,p.description,p.category,...p.tags].join(" ").toLowerCase().includes(q);let matchCat=activeProjectFilter==="Semua"||(activeProjectFilter==="Favorit"?favoriteProjects.has(p.key||p.id||p.name):p.category===activeProjectFilter);return matchText&&matchCat});
+ if(projectSortMode==="name")shown.sort((a,b)=>String(a.name).localeCompare(String(b.name)));else if(projectSortMode==="progress")shown.sort((a,b)=>(Number(b.progress)||0)-(Number(a.progress)||0)||a.order-b.order);else shown.sort((a,b)=>a.order-b.order);
+ $("projectGrid").innerHTML=shown.length?shown.map(p=>{let n=Math.max(0,Math.min(100,Number(p.progress)||0)),key=p.key||p.id||p.name,star=favoriteProjects.has(key),label=progressLabel(p),tags=p.tags.length?p.tags:[p.category||"O51W"];return `<article class="project"><div class="projecttop"><div class="projecticon">${esc(p.icon||"✦")}</div><div class="projectmeta"><span>${String(p.order).padStart(2,"0")}</span><button class="fav ${star?"active":""}" data-fav="${esc(key)}" aria-label="${star?"Hapus dari":"Tambah ke"} favorit" title="Favorit">${star?"★":"☆"}</button></div></div><h3>${esc(p.name)}</h3><p>${esc(p.description||"Belum ada deskripsi.")}</p><div class="project-tags">${tags.map(t=>`<span>${esc(t)}</span>`).join("")}</div><div class="project-progress"><div class="smallrow"><span>Progres</span><span>${n}%</span></div><div class="bar"><i style="width:${n}%"></i></div></div><div class="project-bottom"><span class="project-status">${label}</span>${p.url&&p.url!=="#"?`<a class="project-link" href="${safeHref(p.url)}" target="_blank" rel="noopener">Buka →</a>`:""}</div></article>`}).join(""):`<div class="empty"><b>Tidak ada proyek ditemukan.</b><br>Coba kata kunci atau filter lain.</div>`;
+ let total=normalized.length,avg=total?Math.round(normalized.reduce((a,p)=>a+(Number(p.progress)||0),0)/total):0,done=normalized.filter(p=>Number(p.progress)>=100).length,active=normalized.filter(p=>Number(p.progress)>0&&Number(p.progress)<100).length,waiting=normalized.filter(p=>Number(p.progress)===0).length;
+ $("total").textContent=total;$("avg").textContent=avg+"%";$("done").textContent=done;$("aTotal").textContent=total;$("aAvg").textContent=avg+"%";$("aDone").textContent=done;
+ $("overallProgress").textContent=avg+"%";$("overallBar").style.width=avg+"%";$("activeCount").textContent=active;$("waitingCount").textContent=waiting;$("completedCount").textContent=done;
+}
+$("projectFilters").addEventListener("click",e=>{let b=e.target.closest("[data-filter]");if(!b)return;activeProjectFilter=b.dataset.filter;document.querySelectorAll("#projectFilters .filter").forEach(x=>x.classList.toggle("active",x===b));renderProjects()});
+$("projectSearch").addEventListener("input",e=>{projectSearchText=e.target.value;renderProjects()});
+$("projectSort").addEventListener("change",e=>{projectSortMode=e.target.value;renderProjects()});
+$("projectGrid").addEventListener("click",e=>{let b=e.target.closest("[data-fav]");if(!b)return;let k=b.dataset.fav;if(favoriteProjects.has(k))favoriteProjects.delete(k);else favoriteProjects.add(k);try{localStorage.setItem("o51wProjectFavorites",JSON.stringify([...favoriteProjects]))}catch(e){}renderProjects()});
+function bindSnapshot(){
+listeners.forEach(x=>x());listeners=[];
+const onReadError=label=>err=>{console.error("Firestore read error:",label,err);toast("Gagal memuat "+label+". Periksa koneksi dan Firestore Rules.")};
+listeners.push(db.collection("site").doc("content").onSnapshot(s=>{content=s.exists?s.data():defaults;renderPublic();loadContentForm()},onReadError("konten")));
+listeners.push(db.collection("site").doc("apps").onSnapshot(s=>{const d=s.exists?s.data():null;apps=d&&Array.isArray(d.items)?d.items:defaultApps;renderPublic();renderAppsAdmin()},onReadError("Quick Access")));
+listeners.push(db.collection("site").doc("roadmap").onSnapshot(s=>{const d=s.exists?s.data():null;roadmap=d&&Array.isArray(d.items)?d.items:defaultRoad;renderPublic();renderRoadAdmin()},onReadError("Roadmap")));
+listeners.push(db.collection("projects").onSnapshot(s=>{projects=s.docs.map(d=>({id:d.id,...d.data()}));renderProjects();renderProjectAdmin()},onReadError("proyek")));
+}
+function loadContentForm(){["eyebrow","title","desc","appsTitle","appsDesc","roadTitle","roadDesc","projectsDesc"].forEach(k=>{let el=$("c"+k[0].toUpperCase()+k.slice(1));if(el)el.value=content[k]||defaults[k]})}
+$("contentForm").onsubmit=async e=>{e.preventDefault();if(!isAdmin())return toast("Akun ini bukan admin.");let o={};["eyebrow","title","desc","appsTitle","appsDesc","roadTitle","roadDesc","projectsDesc"].forEach(k=>o[k]=$("c"+k[0].toUpperCase()+k.slice(1)).value.trim());try{await db.collection("site").doc("content").set(o,{merge:true});toast("Konten utama tersimpan.")}catch(e){toast("Gagal menyimpan konten.")}};
+function renderAppsAdmin(){$("appsAdminRows").innerHTML=apps.map((x,i)=>`<div class="rowitem"><div class="grow"><b>${esc(x.name)}</b><small>${esc(x.desc)}</small></div><button class="btn light" onclick="editApp(${i})">Edit</button><button class="btn danger" onclick="removeApp(${i})">Hapus</button></div>`).join("")}
+function renderRoadAdmin(){$("roadAdminRows").innerHTML=roadmap.map((x,i)=>{let s=x.status==="done"||x.status==="Completed"?"Selesai":x.status==="current"||x.status==="Active"?"Dikerjakan":"Menunggu";return `<div class="rowitem"><div class="grow"><b>${esc(x.num||"")}. ${esc(x.name)}</b><small>${s} · ${esc(x.desc)}</small></div><button class="btn light" onclick="editRoad(${i})">Atur roadmap</button><button class="btn danger" onclick="removeRoad(${i})">Hapus</button></div>`}).join("")}
+function renderProjectAdmin(){const items=getAllProjects();$("projectAdminRows").innerHTML=items.map(x=>`<div class="rowitem"><div class="grow"><b>${esc(x.order)}. ${esc(x.name)}</b><small>${Math.max(0,Math.min(100,Number(x.progress)||0))}% · ${progressLabel(x)}</small></div><button class="btn light" onclick="editProject('${esc(x.id)}')">Atur progres</button><button class="btn danger" onclick="removeProject('${esc(x.id)}')" ${projects.some(p=>p.id===x.id)?"":"disabled"}>Hapus</button></div>`).join("")}
+async function saveApps(){assertAdmin();await db.collection("site").doc("apps").set({items:apps},{merge:true});renderAppsAdmin();renderPublic()}
+async function saveRoad(){assertAdmin();await db.collection("site").doc("roadmap").set({items:roadmap},{merge:true});renderRoadAdmin();renderPublic()}
+window.editApp=i=>openEditor("Edit Quick Access",apps[i],async o=>{apps[i]=o;await saveApps()});
+window.removeApp=async i=>{if(!isAdmin())return toast("Akun ini bukan admin.");if(confirm("Hapus app ini?")){apps.splice(i,1);await saveApps();toast("App dihapus.")}}
+$("addApp").onclick=()=>openEditor("Tambah Quick Access",{name:"",desc:"",icon:"✦",url:"#"},async o=>{apps.push(o);await saveApps()});
+window.editRoad=i=>openEditor("Edit Roadmap",roadmap[i],async o=>{roadmap[i]=o;await saveRoad()});
+window.removeRoad=async i=>{if(!isAdmin())return toast("Akun ini bukan admin.");if(confirm("Hapus item roadmap?")){roadmap.splice(i,1);await saveRoad();toast("Roadmap dihapus.")}}
+$("addRoad").onclick=()=>openEditor("Tambah Roadmap",{name:"",desc:"",num:String(roadmap.length+1).padStart(2,"0"),status:"waiting"},async o=>{roadmap.push(o);await saveRoad()});
+window.editProject=id=>{if(!isAdmin())return toast("Akun ini bukan admin.");let p=getAllProjects().find(x=>x.id===id||x.key===id);if(!p)return;const persisted=projects.find(x=>x.id===id);openEditor("Atur Proyek & Progres",p,async o=>{const docId=persisted?.id||p.key||id;if(persisted)await db.collection("projects").doc(docId).update(o);else await db.collection("projects").doc(docId).set({...o,key:p.key||docId});toast("Progres proyek tersimpan.")},true)}
+window.removeProject=async id=>{if(!isAdmin())return toast("Akun ini bukan admin.");const p=projects.find(x=>x.id===id);if(!p)return toast("Proyek bawaan tidak dapat dihapus.");if(confirm("Hapus project?")){await db.collection("projects").doc(id).delete();toast("Project dihapus.")}}
+$("addProject").onclick=()=>openEditor("Tambah Project",{name:"",category:"AI",order:getAllProjects().length+1,status:"Planning",description:"",progress:0,url:"",icon:"P"},async o=>{o.createdAt=firebase.firestore.FieldValue.serverTimestamp();await db.collection("projects").add(o);toast("Project ditambahkan.")},true);
+
+function openEditor(title,data,save,project=false){
+$("modalTitle").textContent=title;let f=$("editForm");
+let fields=project?`
+<div class="field full"><label>Nama</label><input name="name" required value="${esc(data.name)}"></div>
+<div class="field"><label>Kategori</label><input name="category" value="${esc(data.category)}"></div>
+<div class="field"><label>Status otomatis</label><input id="projectStatusPreview" value="${Number(data.progress)>=100?"Selesai":Number(data.progress)>0?"Dikerjakan":"Belum dimulai"}" readonly><small style="color:#777">Status mengikuti persentase progres.</small></div>
+<div class="field full"><label>Deskripsi</label><textarea name="description">${esc(data.description)}</textarea></div>
+<div class="field full"><label>Progres pengerjaan (%)</label><div style="display:grid;grid-template-columns:1fr 82px;gap:12px;align-items:center"><input id="progressRange" type="range" min="0" max="100" step="1" value="${Math.max(0,Math.min(100,Number(data.progress)||0))}" style="width:100%;accent-color:#111"><input id="progressNumber" name="progress" type="number" min="0" max="100" step="1" value="${Math.max(0,Math.min(100,Number(data.progress)||0))}"></div><div class="bar" style="margin-top:12px"><i id="progressPreviewBar" style="width:${Math.max(0,Math.min(100,Number(data.progress)||0))}%"></i></div></div>
+<div class="field"><label>Icon</label><input name="icon" value="${esc(data.icon)}"></div>
+<div class="field full"><label>URL</label><input name="url" value="${esc(data.url)}"></div>`
+: title.includes("Roadmap")||data.num?`<div class="field"><label>Nomor</label><input type="number" min="1" step="1" name="num" value="${esc(data.num)}"></div><div class="field"><label>Status</label><select name="status"><option value="done" ${(data.status==="done"||(!data.status&&Number(data.num)===1))?"selected":""}>Selesai</option><option value="current" ${(data.status==="current"||(!data.status&&Number(data.num)===2))?"selected":""}>Dikerjakan</option><option value="waiting" ${(data.status==="waiting"||(!data.status&&Number(data.num)>2))?"selected":""}>Menunggu</option></select></div><div class="field full"><label>Nama</label><input name="name" required value="${esc(data.name)}"></div><div class="field full"><label>Deskripsi</label><textarea name="desc">${esc(data.desc)}</textarea></div>`
+:`<div class="field"><label>Icon</label><input name="icon" value="${esc(data.icon)}"></div><div class="field"><label>Nama</label><input name="name" required value="${esc(data.name)}"></div><div class="field full"><label>Deskripsi</label><input name="desc" value="${esc(data.desc)}"></div><div class="field full"><label>URL</label><input name="url" value="${esc(data.url||"#")}"></div>`;
+f.innerHTML=fields+`<div class="formfoot"><button type="button" class="btn light" id="modalCancel">Batal</button><button class="btn dark" type="submit">Simpan</button></div>`;
+$("editModal").classList.add("show");$("modalCancel").onclick=closeModal;
+if(project){const range=$("progressRange"),number=$("progressNumber"),bar=$("progressPreviewBar"),preview=$("projectStatusPreview");const sync=v=>{let n=Math.max(0,Math.min(100,Number(v)||0));range.value=n;number.value=n;bar.style.width=n+"%";preview.value=n>=100?"Selesai":n>0?"Dikerjakan":"Belum dimulai"};range.oninput=()=>sync(range.value);number.oninput=()=>sync(number.value)}
+$("editForm").onsubmit=async e=>{e.preventDefault();let fd=new FormData(f),o={...data};fd.forEach((v,k)=>o[k]=["progress","order"].includes(k)?Number(v):String(v).trim());if(project){o.progress=Math.max(0,Math.min(100,Number(o.progress)||0));o.status=o.progress>=100?"Completed":o.progress>0?"Active":"Planning"}try{await save(o);closeModal();toast("Perubahan tersimpan.")}catch(err){toast("Gagal: "+(err.message||"permission denied"))}}
+}
+function closeModal(){$("editModal").classList.remove("show")}$("modalClose").onclick=closeModal;$("editModal").onclick=e=>{if(e.target===$("editModal"))closeModal()};
+
+function openLogin(){if(isAdmin()){openAdmin();return}$("login").classList.add("show")}
+$("openAdmin").onclick=openLogin;$("adminHero").onclick=openLogin;
+$("loginForm").onsubmit=async e=>{e.preventDefault();try{await auth.signInWithEmailAndPassword($("email").value.trim(),$("password").value);$("login").classList.remove("show");if(isAdmin())openAdmin();else{await auth.signOut();toast("Akun berhasil login tetapi bukan admin.")}}catch(err){toast("Login gagal. Periksa akun Firebase.")}};
+function openAdmin(){if(!isAdmin())return openLogin();$("admin").classList.add("show");setMode();loadContentForm();renderAppsAdmin();renderRoadAdmin();renderProjectAdmin()}
+$("closeAdmin").onclick=()=>$("admin").classList.remove("show");
+$("logout").onclick=async()=>{await auth.signOut();$("admin").classList.remove("show");toast("Keluar dari admin.");setMode()};
+document.querySelectorAll(".sidebtn").forEach(b=>b.onclick=()=>{document.querySelectorAll(".sidebtn").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".adminsection").forEach(x=>x.classList.remove("active"));b.classList.add("active");$("tab-"+b.dataset.tab).classList.add("active")});
+auth.onAuthStateChanged(user=>{setMode();if(!listeners.length)bindSnapshot();if(!user||!isAdmin())$("admin").classList.remove("show")},err=>{console.error("Firebase Auth error:",err);toast("Gagal memeriksa sesi admin.")});
+$("year").textContent=new Date().getFullYear();apps=defaultApps;roadmap=defaultRoad;content=defaults;renderPublic();renderAppsAdmin();renderRoadAdmin();renderProjectAdmin();
+
+const voiceSlides=[
+{icon:"🌐",quote:"Wajah kita ke dunia. Tempat pulang semua karya. Dibangun dari kosong, sekarang jadi nyata.",name:"HunzWeb-O51W",role:"Rumah digital",avatar:"W"},
+{icon:"🤖",quote:"Teman, pendamping, yang tumbuh bareng. Ngerti, mendampingi, selalu setia — bukan cuma kode, tapi kehadiran.",name:"HunzAi-O51W",role:"Pendamping digital",avatar:"H"},
+{icon:"🌱",quote:"Akar dari segalanya. Semua bermula dari keinginan sederhana untuk membangun sesuatu milik sendiri.",name:"WAA-O51W",role:"Akar ekosistem",avatar:"A"}
+];let voiceIndex=0;
+function renderVoice(){const v=voiceSlides[voiceIndex];$("voiceTrack").innerHTML=`<article class="voice-card"><div class="voice-icon">${v.icon}</div><p class="voice-quote">“${v.quote}”</p><div class="voice-author"><span class="voice-avatar">${v.avatar}</span><span>${v.name}<small>${v.role}</small></span></div></article>`;$("voiceDots").innerHTML=voiceSlides.map((_,i)=>`<button class="voice-dot ${i===voiceIndex?"active":""}" data-voice="${i}" aria-label="Tampilkan suara ${i+1}" aria-pressed="${i===voiceIndex}"></button>`).join("")}
+$("voicePrev").addEventListener("click",()=>{voiceIndex=(voiceIndex-1+voiceSlides.length)%voiceSlides.length;renderVoice()});
+$("voiceNext").addEventListener("click",()=>{voiceIndex=(voiceIndex+1)%voiceSlides.length;renderVoice()});
+$("voiceDots").addEventListener("click",e=>{const b=e.target.closest("[data-voice]");if(!b)return;voiceIndex=Number(b.dataset.voice);renderVoice()});renderVoice();
+</script>
+</body>
+</html>
