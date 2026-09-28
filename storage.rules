@@ -1,0 +1,19 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isO51WAdmin() {
+      return request.auth != null
+        && request.auth.token.email == 'waao51w@gmail.com';
+    }
+
+    // Global Storage: only the designated admin can list, read, upload, or delete files.
+    match /global/{fileName=**} {
+      allow read, write: if isO51WAdmin();
+    }
+
+    // Deny access to all other Storage paths.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
