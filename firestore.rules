@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Project boleh dilihat publik.
+    // Hanya akun yang terdaftar sebagai admin yang boleh membuat,
+    // mengubah, atau menghapus project.
+    match /projects/{projectId} {
+      allow read: if true;
+
+      allow create, update, delete: if
+        request.auth != null &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == "admin";
+    }
+
+    // Dokumen role admin tidak boleh dibaca/diubah dari client.
+    match /admins/{uid} {
+      allow read, write: if false;
+    }
+  }
+}
